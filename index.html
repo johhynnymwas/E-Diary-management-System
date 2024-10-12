@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Diary Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>E-Diary Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="auth">
+            <h2>Welcome to Your Digital Diary</h2>
+            <p>Please log in or sign up to continue.</p>
+            <div id="loginForm">
+                <h3>Login</h3>
+                <form onsubmit="validateLogin(event)"method="POST" >
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" name="username" required>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="javascript:void(0);" onclick="toggleForm()">Sign up</a></p>
+            </div>
+            <div id="signupForm" style="display:none;">
+                <h3>Sign Up</h3>
+                <form onsubmit="validateSignup(event)"method="POST">
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername" name="username" required>
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="javascript:void(0);" onclick="toggleForm()">Login</a></p>
+            </div>
+        </section>
+        <section id="photoGallery">
+            <h2>My Photo Gallery</h2>
+            <div id="gallery">
+                <img id="galleryImage" src="images/jeshoots-com-9n1USijYJZ4-unsplash.jpg" alt="Gallery Image" />
+            </div>
+        </section>
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>User-friendly interface</li>
+                <li>Secure login and data protection</li>
+                <li>Search and categorize entries</li>
+                <li>Set reminders for important dates</li>
+                <li>Access from any device</li>
+            </ul>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are passionate about helping you keep your thoughts organized. Our team is dedicated to providing a seamless experience that enhances your writing journey.</p>
+        </section>
+    </main>
+    <footer>
+        <h3>Contact Us</h3>
+        <p>Email: info@ediary.com</p>
+        <p>© 2024 E-Diary Management System</p>
+    </footer>
+</body>
+</html>

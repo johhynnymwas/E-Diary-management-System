@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Reminders</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- Link to the reminders JavaScript file -->
+</head>
+<body>
+    <header>
+        <h1>Event Reminders</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="diary.html">My Diary</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Add a Reminder</h2>
+            <form onsubmit="addReminder(event)">
+                <label for="reminderText">Reminder:</label>
+                <input type="text" id="reminderText" required>
+                <label for="reminderDate">Date and Time:</label>
+                <input type="datetime-local" id="reminderDate" required>
+                <button type="submit">Add Reminder</button>
+            </form>
+        </section>
+        <section id="reminderList">
+            <h2>Your Reminders</h2>
+            <!-- Reminders will appear here -->
+        </section>
+        <section>
+            <h2>Add a To-Do</h2>
+            <form onsubmit="addTodoItem(event)">
+                <label for="todoText">To-Do:</label>
+                <input type="text" id="todoText" required>
+                <button type="submit">Add To-Do</button>
+            </form>
+        </section>
+
+        <section id="todoList">
+            <h2>Your To-Do List</h2>
+            <!-- To-Do items will appear here -->
+        </section>
+
+    </main>
+    <footer>
+        <h3>Contact Us</h3>
+        <p>Email: info@ediary.com</p>
+        <p>© 2024 E-Diary Management System</p>
+    </footer>
+</body>
+</html>

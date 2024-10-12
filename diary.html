@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Diary</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- Link to the JavaScript file -->
+</head>
+<body>
+    <header>
+        <h1>E-Diary Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reminders.html">Event Reminders</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Write a New Diary</h2>
+            <div>
+                <strong>Current Date and Time:</strong>
+                <span id="currentDateTime"></span>
+            </div>
+            <form onsubmit="saveEntry(event)">
+                <label for="diaryEntry">Diary Entry:</label>
+                <textarea id="diaryEntry" rows="10" required></textarea>
+                <button type="submit">Save Entry</button>
+                <button type="button" onclick="clearEntry()">Start Writing</button> <!-- Button to clear current entry -->
+            </form>
+        </section>
+        <section>
+            <h2>Search Diary Entries</h2>
+            <input type="text" id="searchInput" placeholder="Search entries..." oninput="searchEntries()">
+        </section>
+        <section id="entryList">
+            <h2>My Diary Entries</h2>
+            <!-- Entries will appear here -->
+        </section>
+        <section id="otherDiaries">
+            <h2>Other People's Diaries</h2>
+            <div id="otherDiaryList">
+                <!-- Other diary entries will appear here -->
+            </div>
+        </section>
+        <section id="quoteSection">
+            <h2>Quote of the Day</h2>
+            <blockquote id="quoteText"></blockquote>
+            <p id="quoteAuthor"></p>
+        </section>
+    </main>
+    <footer>
+        <h3>Contact Us</h3>
+        <p>Email: info@ediary.com</p>
+        <p>© 2024 E-Diary Management System</p>
+    </footer>
+</body>
+</html>
